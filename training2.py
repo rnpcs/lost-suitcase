@@ -43,12 +43,17 @@ def tagging(lon_list, lat_list, name_list):
         #fill_color='#3186cc'
     ).add_to(m)
 
+
+
+    # I can add marker one by one on the map
+
     for i in range(0,len(data)):
  
         folium.Marker([data.iloc[i]['lon'], data.iloc[i]['lat']],
          popup=data.iloc[i]['name'],
          icon=folium.Icon(icon = 'bus', prefix='fa')
     ).add_to(m)
+
 
     m.save('map.html')
     
@@ -57,6 +62,22 @@ def tagging(lon_list, lat_list, name_list):
     cwd = os.getcwd() 
     driver.get('file://'+ cwd + url2)
 
+    return 
+
+
+    # Save it as html
+    m.save('map.html')
+    
+    #url2=('map.html')
+    #webbrowser.open(url2, new=2, autoraise=True)
+    
+    url2=('\map.html')
+    cwd = os.getcwd() 
+
+    driver.get('file://'+ cwd + url2)
+    
+    #print(driver)
+ 
     return 
 
 
@@ -80,6 +101,11 @@ def haversine(lat1, lon1, lat2, lon2):
     rad = 6371
     c = 2 * math.asin(math.sqrt(a)) 
     return rad * c 
+
+
+
+# In[ ]:
+
 
 def getData():
     url = 'http://ctabustracker.com/bustime/map/getBusesForRoute.jsp?route=22'
@@ -127,7 +153,11 @@ def main():
 
     id_no, d,lat, lon,  dis = getData()
     
-    
+
+    return
+
+
+
 driver = webdriver.Firefox()
 while True:
 
