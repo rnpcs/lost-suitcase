@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e80de80016db4bda9cca8531e72cbffc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_e80de80016db4bda9cca8531e72cbffc" ></div>
+        
+</body>
+<script>    
+    
+            var map_e80de80016db4bda9cca8531e72cbffc = L.map(
+                "map_e80de80016db4bda9cca8531e72cbffc",
+                {
+                    center: [41.980262, -87.668452],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2f401da9c60b4a19a6b389481091004d = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e80de80016db4bda9cca8531e72cbffc);
+        
+    
+            var marker_7c30a191cf734230a3210aea11198e42 = L.marker(
+                [41.980262, -87.668452],
+                {}
+            ).addTo(map_e80de80016db4bda9cca8531e72cbffc);
+        
+    
+            var icon_4dc4fc50e0934730b29377f6ef7880c2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "user", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7c30a191cf734230a3210aea11198e42.setIcon(icon_4dc4fc50e0934730b29377f6ef7880c2);
+        
+    
+        var popup_af9ff6cd25d549d5bad496cb68f8a303 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d185174835ee428ab04a1e68c2411af4 = $(`<div id="html_d185174835ee428ab04a1e68c2411af4" style="width: 100.0%; height: 100.0%;">You are here</div>`)[0];
+            popup_af9ff6cd25d549d5bad496cb68f8a303.setContent(html_d185174835ee428ab04a1e68c2411af4);
+        
+
+        marker_7c30a191cf734230a3210aea11198e42.bindPopup(popup_af9ff6cd25d549d5bad496cb68f8a303)
+        ;
+
+        
+    
+    
+            var circle_b93c64028cec4ac9b1c26ea197bba34f = L.circle(
+                [41.980262, -87.668452],
+                {"bubblingMouseEvents": true, "color": "#3186cc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000, "stroke": true, "weight": 3}
+            ).addTo(map_e80de80016db4bda9cca8531e72cbffc);
+        
+    
+        var popup_a02bdb3c3212401ea4ac22059d91757e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0ef7b1d253f34ab3ac0b3ce9f15dc9b5 = $(`<div id="html_0ef7b1d253f34ab3ac0b3ce9f15dc9b5" style="width: 100.0%; height: 100.0%;">Within 1 KM</div>`)[0];
+            popup_a02bdb3c3212401ea4ac22059d91757e.setContent(html_0ef7b1d253f34ab3ac0b3ce9f15dc9b5);
+        
+
+        circle_b93c64028cec4ac9b1c26ea197bba34f.bindPopup(popup_a02bdb3c3212401ea4ac22059d91757e)
+        ;
+
+        
+    
+    
+            var marker_c9b6b4b859944806a3a90f12cda371ba = L.marker(
+                [41.966637975519355, -87.66702090176669],
+                {}
+            ).addTo(map_e80de80016db4bda9cca8531e72cbffc);
+        
+    
+            var icon_cffd86a0cf4246c1b338d407a3ff09c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c9b6b4b859944806a3a90f12cda371ba.setIcon(icon_cffd86a0cf4246c1b338d407a3ff09c3);
+        
+    
+        var popup_f6bec96dd8a8458b99d9680427a8dcfa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8a34fb17c324d22b7c03ddca7635afc = $(`<div id="html_e8a34fb17c324d22b7c03ddca7635afc" style="width: 100.0%; height: 100.0%;">Bus No: 1744</div>`)[0];
+            popup_f6bec96dd8a8458b99d9680427a8dcfa.setContent(html_e8a34fb17c324d22b7c03ddca7635afc);
+        
+
+        marker_c9b6b4b859944806a3a90f12cda371ba.bindPopup(popup_f6bec96dd8a8458b99d9680427a8dcfa)
+        ;
+
+        
+    
+    
+            var marker_bbbbefda1c4540bf8817bdbe6873e672 = L.marker(
+                [41.99752709173387, -87.6703373078377],
+                {}
+            ).addTo(map_e80de80016db4bda9cca8531e72cbffc);
+        
+    
+            var icon_2f435634f34e4884ac03bf762601c0c6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_bbbbefda1c4540bf8817bdbe6873e672.setIcon(icon_2f435634f34e4884ac03bf762601c0c6);
+        
+    
+        var popup_b0111dbce2234429b96e43d8b76cf456 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eeef209e9b3941f0bb462322afbce4b3 = $(`<div id="html_eeef209e9b3941f0bb462322afbce4b3" style="width: 100.0%; height: 100.0%;">Bus No: 4070</div>`)[0];
+            popup_b0111dbce2234429b96e43d8b76cf456.setContent(html_eeef209e9b3941f0bb462322afbce4b3);
+        
+
+        marker_bbbbefda1c4540bf8817bdbe6873e672.bindPopup(popup_b0111dbce2234429b96e43d8b76cf456)
+        ;
+
+        
+    
+</script>
